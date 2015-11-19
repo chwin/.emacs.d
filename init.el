@@ -54,3 +54,21 @@
 ;; 在 DOING HANGUP DONE 和 CANCEL 后的括号中都有一个’!'，这种写法表示进入到这些状态后会记录下当前时间。而每个状态后面的括号中都有一个字母，这个字母就是进入该状态的快捷键。当你想切换到某一状态时，可以输入’C-c C-t’（此时 emacs 会弹出一个提示窗口），然后输入对应的快捷键就可以把当前的条目设置为该状态。
 (setq org-todo-keywords
       '((sequence "TODO(t)" "DOING(i!)" "HANGUP(h!)" "|" "DONE(d!)" "CANCEL(c!)")))
+
+
+;; 快捷键绑定
+;; =================================
+
+(global-set-key (kbd "C-;") 'read-only-mode);只读模式切换
+;(global-set-key [M-f1] 'shell);F1进入Shell
+;(global-set-key [M-f2] 'python-shell);F2进入Python-Shell
+;(global-set-key (kbd "C-`") 'eval-buffer);配置文件生效
+;(global-set-key [f5] 'gdb);F5调试程序
+;(setq compile-command "make -f Makefile")
+;(global-set-key [f7] 'do-compile);F7编译文件
+;(global-set-key [f3] 'other-window);F3窗口间跳转
+;(global-set-key [f4] 'delete-other-windows);F4 关闭其它窗口
+;(global-set-key [C-return] 'kill-this-buffer);C-return关闭当前buffer
+;(global-set-key [f1] 'split-window-vertically);F1分割窗口
+;(global-set-key (kbd "C-,") 'backward-page);文件首
+;(global-set-key (kbd "C-.") 'forward-page);文件尾
