@@ -37,12 +37,12 @@
 ;; 设置字体
 ;; Setting English Font
 (set-face-attribute
- 'default nil :font "Consolas 14")
+ 'default nil :font "Consolas 11")
 ;; Chinese Font
 (dolist (charset '(kana han symbol cjk-misc bopomofo))
   (set-fontset-font (frame-parameter nil 'font)
                     charset
-                    (font-spec :family "Microsoft Yahei" :size 16)))
+                    (font-spec :family "Microsoft Yahei" :size 13)))
 ;; =================================
 ;; todo list 默认只有两种状态： TODO 和 DONE。我们可以再增加一些其他状态。比如在.emacs中加入下面的语句:
 ;; 可以将 todo list 的状态增加为五种：TODO，DOING，HANGUP，DONE，CANCEL。
